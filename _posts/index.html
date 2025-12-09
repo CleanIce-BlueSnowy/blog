@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"cleanice-blog.netlify.app","root":"/","images":"/images","scheme":"Gemini","darkmode":{"enable":true,"auto":true,"button":true},"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":null,"show_result":true},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="凌雪蓝冰的计算机科学博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="算法星河">
+<meta property="og:url" content="https://cleanice-blog.netlify.app/_posts/index.html">
+<meta property="og:site_name" content="算法星河">
+<meta property="og:description" content="凌雪蓝冰的计算机科学博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="凌雪蓝冰">
+<meta property="article:tag" content="凌雪蓝冰, 计算机科学, 博客, 计算机, 算法, 探索, 星河, 未来, 理论, 电脑, 编程, 技术">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://cleanice-blog.netlify.app/_posts/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"_posts/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>算法星河</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">算法星河</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">乘上探索计算机科学的宇宙飞船，向着星河，立刻出发！</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-book"><a href="/book/" rel="section"><i class="fa fa-book fa-fw"></i>book</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">凌雪蓝冰</p>
+  <div class="site-description" itemprop="description">凌雪蓝冰的计算机科学博客</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/CleanIce-BlueSnowy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;CleanIce-BlueSnowy" rel="noopener me" target="_blank">GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/CleanIce2023@outlook.com" title="E-Mail → CleanIce2023@outlook.com" rel="noopener me">E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/821660" title="洛谷 → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;821660" rel="noopener me" target="_blank">洛谷</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/CleanIceProgrammer" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;CleanIceProgrammer" rel="noopener me" target="_blank">知乎</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://cleanice-blog.netlify.app/2025/12/08/c_cpp_go_rust_cmp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="凌雪蓝冰">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="算法星河">
+      <meta itemprop="description" content="凌雪蓝冰的计算机科学博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 算法星河">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/12/08/c_cpp_go_rust_cmp/" class="post-title-link" itemprop="url">四大系统级编程语言对比（语言层面）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-12-08 20:34:03" itemprop="dateCreated datePublished" datetime="2025-12-08T20:34:03+08:00">2025-12-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-12-09 22:47:27" itemprop="dateModified" datetime="2025-12-09T22:47:27+08:00">2025-12-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文进行四大系统级编程语言在语言层面的对比。发现本文勘误、不合理之处，可以进行指出。目前博客暂未启动评论区。</p>
+<p>本文进行对比时，均采用当时最新版本的语言。</p>
+<h1>四大系统级编程语言</h1>
+<p>本文所指的四大系统级编程语言分别是：C、C++、Go、Rust。这是目前公认的四种，即便 Go 语言存在一定争议。由于 Go 语言在性能上可以追上 C 与 C++，而语法上又大部分借鉴于 C 语言，使用方法也类似，也不止可以用在高并发网络领域，所以我们把 Go 也算作其中一员。</p>
+<h1>关于本文的定义</h1>
+<p>为了更好地对编程语言进行分类，本文中使用了一些基于又高于学界工人的分类标准和定义。我们会给出本文使用的分类标准的定义。</p>
+<h1>语言特性对比</h1>
+<h2 id="类型系统">类型系统</h2>
+<p>定义：</p>
+<ul>
+<li>
+<p><strong>类型动态性</strong>：表示变量和数据的类型是否运行时可变。这是相对 JavaScript、Python 等语言而言的，并不是指面向对象中的多态的可变性。</p>
+<ul>
+<li>静态类型：表示不可变。</li>
+<li>动态类型：表示可变。</li>
+</ul>
+</li>
+<li>
+<p><strong>类型严格性</strong>：表示允许的隐式类型转换与不同类型操作的程度。</p>
+<ul>
+<li>弱类型：表示默认就进行隐式类型转换，如 JavaScript 语言允许将一个字符串与一个数字进行操作、<code>==</code> 符号会进行很多类型转换。</li>
+<li>强类型：表示不允许不安全的隐式类型转换，但允许合理的隐式类型转换，如数值类型的互相转换等。</li>
+<li>严格类型：表示不允许几乎所有的隐式类型转换，哪怕是数值的转换等，强制要求类型匹配。</li>
+</ul>
+</li>
+<li>
+<p><strong>共享数据类型</strong>：表示使用哪种方式的数据类型进行数据共享。仅从语言原始层面，不考虑标准库。</p>
+<ul>
+<li>基于指针：使用指针（底层是内存地址）进行数据共享。指针不拥有数据，但不要求数据存在。</li>
+<li>基于引用：使用引用进行数据共享。多个引用可以同时“拥有”一个数据。</li>
+<li>基于借用（所有权）：使用借用进行数据共享。一个数据只能有一个所有者，借用必须满足借用条件。</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">语言</th>
+<th style="text-align:center">类型动态性</th>
+<th style="text-align:center">类型严格性</th>
+<th style="text-align:center">共享数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">C</td>
+<td style="text-align:center">静态类型</td>
+<td style="text-align:center">强类型</td>
+<td style="text-align:center">基于指针</td>
+</tr>
+<tr>
+<td style="text-align:center">C++</td>
+<td style="text-align:center">静态类型</td>
+<td style="text-align:center">强类型</td>
+<td style="text-align:center">基于指针</td>
+</tr>
+<tr>
+<td style="text-align:center">Go</td>
+<td style="text-align:center">静态类型</td>
+<td style="text-align:center">严格类型</td>
+<td style="text-align:center">基于引用</td>
+</tr>
+<tr>
+<td style="text-align:center">Rust</td>
+<td style="text-align:center">静态类型</td>
+<td style="text-align:center">严格类型</td>
+<td style="text-align:center">基于借用（所有权）</td>
+</tr>
+</tbody>
+</table>
+<details class="note info"><summary><p>提示</p>
+</summary>
+<p>Go 语言中有指针类型，但其指针类型行为与 Java 的引用类似，使用垃圾回收机制，所以归为基于引用的类型系统。</p>
+
+</details>
+<h2 id="内存管理">内存管理</h2>
+<p>定义：</p>
+<ul>
+<li>
+<p><strong>手动内存管理</strong>：手动进行内存的分配和释放。内存安全由程序员全权负责。</p>
+</li>
+<li>
+<p><strong>智能指针管理</strong>：使用标准库提供的智能指针，将指针的内存管理自动化。程序员需要承担一定的内存安全责任。</p>
+</li>
+<li>
+<p><strong>垃圾回收自动内存管理</strong>：基于垃圾回收的自动内存管理，程序仅分配，后台检查内存使用情况并自动释放。程序员一般不需要承担内存安全的责任。</p>
+</li>
+<li>
+<p><strong>生命周期自动内存管理</strong>：基于静态的生命周期分析，编译时决定数据分配和释放的位置。程序员需要管理生命周期，但编译器承担内存安全的责任。</p>
+</li>
+</ul>
+<p>对于智能指针管理和垃圾回收自动内存管理的区别，前者不需要运行时或者后台暂停，而后者需要。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">语言</th>
+<th style="text-align:center">内存管理形式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">C</td>
+<td style="text-align:center">手动内存管理</td>
+</tr>
+<tr>
+<td style="text-align:center">C++</td>
+<td style="text-align:center">手动内存管理</td>
+</tr>
+<tr>
+<td style="text-align:center">Go</td>
+<td style="text-align:center">垃圾回收自动内存管理</td>
+</tr>
+<tr>
+<td style="text-align:center">Rust</td>
+<td style="text-align:center">生命周期自动内存管理</td>
+</tr>
+</tbody>
+</table>
+<details class="note info"><summary><p>提示</p>
+</summary>
+<p>C++ 有 <code>std::shared_ptr</code> 和 <code>std::unique_ptr</code> 等类型，它们是只能指针。但是它们是基于标准库实现的包装类型，只是将手动内存管理的任务包装起来了而已。所以在语言层面我们不认为 C++ 有智能指针管理。</p>
+<p>Rust 语言中有 <code>Rc</code> 和 <code>Arc</code> 类型，它们也是智能指针。但它没有打破 Rust 的“一个数据只能有一个所有者”的限制，它仅仅包装了一个共享的数据，对于内部的这个数据来说，类似于多所有者。Rust 将 <code>Rc</code> 和 <code>Arc</code> 类型视作普通类型，一视同仁地进行生命周期分析，并决定分配和释放的位置，以及检查借用合法性。所以此处不认为 Rust 语言层面有智能指针管理。</p>
+
+</details>
+<h2 id="编程范式">编程范式</h2>
+<p>定义：</p>
+<ul>
+<li>
+<p><strong>过程式</strong>：与传统定义一致，强调代码的模块化，用函数或子过程分解问题。</p>
+</li>
+<li>
+<p><strong>函数式</strong>：与传统定义一致，但没有那么严苛的要求，不一定需要纯函数式的内容，如不可变变量。</p>
+</li>
+<li>
+<p><strong>面向对象</strong>：与传统定义基本一致，有多态、继承等概念。</p>
+</li>
+<li>
+<p><strong>行为抽象</strong>：将某些类型的共同行为抽象出来，并且让这些类型实现该抽象。有些地方将此范式归入面向对象的范畴，但是两者在类型系统实现和编码习惯上有本质区别，而不仅仅是行为抽象没有继承等表面上的区别。</p>
+</li>
+<li>
+<p><strong>泛型编程</strong>：与传统定义基本一致，在编写代码时不明确指定类型，在使用时以类似参数的形式确定类型。</p>
+</li>
+<li>
+<p><strong>声明式</strong>：与命令式相对，描述目标性质和功能而非下达具体指令和步骤。如 SQL 语言。此类语言不一定要图灵完备。</p>
+</li>
+<li>
+<p><strong>逻辑式</strong>：以数学逻辑表达式为基础构建程序，程序环境进行逻辑分析推理。如 Prolog 语言。</p>
+</li>
+<li>
+<p><strong>标记式</strong>：以特定标记完成特定功能。如 HTML、Markdown、LaTeX 等。此类语言不一定要图灵完备，但也有完备者，如新兴排版编程语言 Typst。</p>
+</li>
+<li>
+<p><strong>元编程</strong>：能够操作程序自身或其他程序结构，在编译时或运行时动态地进行修改代码，最常见的是反射机制。</p>
+</li>
+<li>
+<p><strong>命令式</strong>：使用一系列明确的命令（或指令）排列组合构建程序，主要以改变程序状态进行编程。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">语言</th>
+<th style="text-align:left">编程范式（第一位加粗为主要范式，后无先后顺序）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">C</td>
+<td style="text-align:left"><strong>过程式</strong> <br/> 命令式</td>
+</tr>
+<tr>
+<td style="text-align:center">C++</td>
+<td style="text-align:left"><strong>面向对象</strong> <br/> 行为抽象：抽象类与纯抽象类 <br/> 过程式 <br/> 函数式：标准库提供 <br/> 元编程：模板元编程和标准库提供的有限的运行时多类型 <br/> 泛型编程：模板元编程 <br/> 命令式</td>
+</tr>
+<tr>
+<td style="text-align:center">Go</td>
+<td style="text-align:left"><strong>行为抽象</strong>：使用接口 <code>interface</code> <br/> 过程式 <br/> 函数式：部分 <br/> 元编程：运行时反射，使用 <code>reflect</code> 包 <br/> 泛型编程：后期引入类型参数 <br/> 命令式</td>
+</tr>
+<tr>
+<td style="text-align:center">Rust</td>
+<td style="text-align:left"><strong>行为抽象</strong>：使用特征 <code>trait</code> <br/> 过程式 <br/> 函数式：极其强大的迭代器 <br/> 元编程：编译时抽象语法树（AST）的修改，使用过程宏和属性宏 <br/> 泛型编程 <br/> 命令式</td>
+</tr>
+</tbody>
+</table>
+<h1>语言语法对比</h1>
+<h2 id="数据类型对比">数据类型对比</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">C++</th>
+<th style="text-align:center">Go</th>
+<th style="text-align:center">Rust</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">平台特定整数</td>
+<td style="text-align:center" colspan="2"><code>int</code> 与 <code>unsigned int</code></td>
+<td style="text-align:center"><code>int</code> 与 <code>uint</code></td>
+<td style="text-align:center"><code>usize</code> 与 <code>isize</code></td>
+</tr>
+<tr>
+<td style="text-align:center">8 位整数</td>
+<td style="text-align:center"><code>int8_t</code> 与 <code>uint8_t</code></td>
+<td style="text-align:center"><code>std::int8_t</code> 与 <code>std::uint8_t</code></td>
+<td style="text-align:center"><code>int8</code> 与 <code>uint8</code></td>
+<td style="text-align:center"><code>i8</code> 与 <code>u8</code></td>
+</tr>
+<tr>
+<td style="text-align:center">16 位整数</td>
+<td style="text-align:center"><code>int16_t</code> 与 <code>uint16_t</code></td>
+<td style="text-align:center"><code>std::int16_t</code> 与 <code>std::uint16_t</code></td>
+<td style="text-align:center"><code>int16</code> 与 <code>uint16</code></td>
+<td style="text-align:center"><code>i16</code> 与 <code>u16</code></td>
+</tr>
+<tr>
+<td style="text-align:center">32 位整数</td>
+<td style="text-align:center"><code>int32_t</code> 与 <code>uint32_t</code></td>
+<td style="text-align:center"><code>std::int32_t</code> 与 <code>std::uint32_t</code></td>
+<td style="text-align:center"><code>int32</code> 与 <code>uint32</code></td>
+<td style="text-align:center"><code>i32</code> 与 <code>u32</code></td>
+</tr>
+<tr>
+<td style="text-align:center">64 位整数</td>
+<td style="text-align:center"><code>int64_t</code> 与 <code>uint64_t</code></td>
+<td style="text-align:center"><code>std::int64_t</code> 与 <code>std::uint64_t</code></td>
+<td style="text-align:center"><code>int64</code> 与 <code>uint64</code></td>
+<td style="text-align:center"><code>i64</code> 与 <code>u64</code></td>
+</tr>
+<tr>
+<td style="text-align:center">128 位整数</td>
+<td style="text-align:center" colspan="2">标准内无</td>
+<td style="text-align:center">标准内无</td>
+<td style="text-align:center"><code>i128</code> 与 <code>u128</code></td>
+</tr>
+<tr>
+<td style="text-align:center">单精度浮点型</td>
+<td style="text-align:center" colspan="2"><code>float</code></td>
+<td style="text-align:center"><code>float32</code></td>
+<td style="text-align:center"><code>f32</code></td>
+</tr>
+<tr>
+<td style="text-align:center">双精度浮点型</td>
+<td style="text-align:center" colspan="2"><code>double</code></td>
+<td style="text-align:center"><code>float64</code></td>
+<td style="text-align:center"><code>f64</code></td>
+</tr>
+<tr>
+<td style="text-align:center">长双精度浮点型（硬件依赖）</td>
+<td style="text-align:center" colspan="2"><code>long double</code></td>
+<td style="text-align:center">标准内无</td>
+<td style="text-align:center">标准内无</td>
+</tr>
+<tr>
+<td style="text-align:center">布尔型</td>
+<td style="text-align:center" colspan="4"><code>bool</code></td>
+</tr>
+<tr>
+<td style="text-align:center">单精度复数</td>
+<td style="text-align:center"><code>float _Complex</code></td>
+<td style="text-align:center"><code>std::complex&lt;float&gt;</code></td>
+<td style="text-align:center"><code>complex64</code></td>
+<td style="text-align:center"><code>std::complex::Complex&lt;f32&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:center">双精度复数</td>
+<td style="text-align:center"><code>double _Complex</code></td>
+<td style="text-align:center"><code>std::complex&lt;double&gt;</code></td>
+<td style="text-align:center"><code>complex128</code></td>
+<td style="text-align:center"><code>std::complex::Complex&lt;f64&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:center">高精度整数</td>
+<td style="text-align:center" colspan="2">标准内无，需手动实现或第三方库</td>
+<td style="text-align:center">内置 <code>big.Int</code></td>
+<td style="text-align:center">第三方库 <code>num_bigint::BigInt</code></td>
+</tr>
+<tr>
+<td style="text-align:center">高精度浮点数</td>
+<td style="text-align:center" colspan="2">标准内无，需手动实现或第三方库</td>
+<td style="text-align:center">内置 <code>big.Float</code></td>
+<td style="text-align:center">第三方库 <code>decimal::d128</code></td>
+</tr>
+<tr>
+<td style="text-align:center">分数 / 有理数</td>
+<td style="text-align:center">标准内无，需手动实现</td>
+<td style="text-align:center">第三方库 <code>boost::rational&lt;int_type&gt;</code></td>
+<td style="text-align:center">标准库扩展 <code>big.Rat</code></td>
+<td style="text-align:center">第三方库 <code>num_rational::Ratio</code></td>
+</tr>
+<tr>
+<td style="text-align:center">空类型 / 无返回类型</td>
+<td style="text-align:center" colspan="2"><code>void</code></td>
+<td style="text-align:center">无显式，可用空结构 <code>struct&#123;&#125;</code></td>
+<td style="text-align:center"><code>()</code> 和 <code>!</code></td>
+</tr>
+<tr>
+<td style="text-align:center">共享数据类型（所有）</td>
+<td style="text-align:center">指针 <code>type*</code></td>
+<td style="text-align:center">指针 <code>type*</code> 与引用 <code>type&amp;</code></td>
+<td style="text-align:center">类指针 <code>*type</code></td>
+<td style="text-align:center">借用 <code>&amp;type</code> 与 <code>&amp;mut type</code></td>
+</tr>
+<tr>
+<td style="text-align:center">字符类型</td>
+<td style="text-align:center"><code>char</code> 单字节 / <code>UChar32</code> ICU 第三方库提供的 Unicode 字符</td>
+<td style="text-align:center"><code>char</code> 遗留单字节 / <code>wchar_t</code> 不推荐使用的宽字符 / <code>char8_t</code> UTF-8 / <code>char16_t</code> UTF-16 / <code>char32_t</code> UTF-32 或 Unicode 字符</td>
+<td style="text-align:center"><code>byte</code> 单字节 / <code>rune</code> Unicode 字符</td>
+<td style="text-align:center"><code>u8</code> 单字节 / <code>char</code> Unicode 字符</td>
+</tr>
+</tbody>
+</table>
+<h3 id="静态数组对比">静态数组对比</h3>
+<p>仅展示类型声明形式，不考虑变量等问题。</p>
+<h4 id="C">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="built_in">array</span>[<span class="number">100</span>];</span><br></pre></td></tr></table></figure>
+<h4 id="C-2">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> origin[<span class="number">100</span>];  <span class="comment">// 原始</span></span><br><span class="line">std::array&lt;<span class="type">int</span>, 100&gt; modern;  <span class="comment">// 现代</span></span><br></pre></td></tr></table></figure>
+<h4 id="Go">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array [<span class="number">100</span>]<span class="type">int</span></span><br></pre></td></tr></table></figure>
+<h4 id="Rust">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">array</span> = [<span class="type">i32</span>; <span class="number">100</span>];</span><br></pre></td></tr></table></figure>
+<h3 id="动态数组对比">动态数组对比</h3>
+<p>仅展示类型声明形式，不考虑变量等问题。</p>
+<h4 id="C-3">C</h4>
+<p>手动实现。使用指针管理内存：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="built_in">array</span>;</span><br></pre></td></tr></table></figure>
+<p>动态分配和释放内存：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="built_in">array</span> = <span class="built_in">malloc</span>(<span class="number">3</span> * <span class="keyword">sizeof</span>(<span class="type">int</span>));  <span class="comment">// 分配</span></span><br><span class="line"><span class="built_in">array</span>[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">array</span>[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">array</span>[<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">free</span>(<span class="built_in">array</span>);  <span class="comment">// 释放</span></span><br></pre></td></tr></table></figure>
+<h4 id="C-4">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">std::vector&lt;<span class="type">int</span>&gt; array&#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;;  <span class="comment">// 初始化</span></span><br><span class="line"><span class="function">std::vector&lt;<span class="type">int</span>&gt; <span class="title">arr_with_len</span><span class="params">(<span class="number">10</span>)</span></span>;  <span class="comment">// 带长度</span></span><br></pre></td></tr></table></figure>
+<h4 id="Go-2">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array := []<span class="type">int</span>&#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;  <span class="comment">// 初始化</span></span><br><span class="line">arrWithLen := <span class="built_in">make</span>([]<span class="type">int</span>, <span class="number">10</span>)  <span class="comment">// 带长度</span></span><br></pre></td></tr></table></figure>
+<h4 id="Rust-2">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加了显示类型声明</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">array</span>: <span class="type">Vec</span>&lt;<span class="type">i32</span>&gt; = <span class="built_in">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];  <span class="comment">// 初始化</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">arr_with_len</span>: <span class="type">Vec</span>&lt;_&gt; = <span class="built_in">vec!</span>[<span class="number">0</span>; <span class="number">10</span>];  <span class="comment">// 带长度，自动类型推导</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符串对比">字符串对比</h3>
+<h4 id="C-5">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span>* str1 = <span class="string">&quot;Hello!&quot;</span>;  <span class="comment">// 字面量</span></span><br><span class="line"><span class="type">char</span>* str2 = <span class="built_in">malloc</span>(<span class="number">7</span> * <span class="keyword">sizeof</span>(<span class="type">char</span>));  <span class="comment">// 动态</span></span><br><span class="line"><span class="comment">//  依靠第三方库 ICU 可以（很复杂地）实现 Unicode 字符串</span></span><br></pre></td></tr></table></figure>
+<h4 id="C-6">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span>* str1 = <span class="string">&quot;Hello!&quot;</span>;  <span class="comment">// 字面量</span></span><br><span class="line">std::string str2;  <span class="comment">// 现代，可表示 UTF-8</span></span><br><span class="line">std::u16string str3;  <span class="comment">// UTF-16</span></span><br><span class="line">std::u32string str4;  <span class="comment">// UTF-32</span></span><br><span class="line">icu::UnicodeString str5;  <span class="comment">// 第三方库 ICU</span></span><br></pre></td></tr></table></figure>
+<h4 id="Go-3">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str1 := <span class="string">&quot;Hello!&quot;</span>  <span class="comment">// 字面量</span></span><br><span class="line"><span class="keyword">var</span> str2 <span class="type">string</span>  <span class="comment">// 显式声明类型，UTF-8</span></span><br></pre></td></tr></table></figure>
+<h4 id="Rust-3">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">str1</span>: &amp;<span class="type">str</span> = <span class="string">&quot;Hello!&quot;</span>;  <span class="comment">// 字面量</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">str2</span>: <span class="type">String</span>;  <span class="comment">// 动态，强制 UTF-8</span></span><br></pre></td></tr></table></figure>
+<h3 id="哈希表对比">哈希表对比</h3>
+<h4 id="C-7">C</h4>
+<p>手动实现。</p>
+<h4 id="C-8">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">std::unordered_map&lt;std::string, <span class="type">int</span>&gt; table = &#123;</span><br><span class="line">    &#123; <span class="string">&quot;Perfect&quot;</span>: <span class="number">100</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;Excellent&quot;</span>: <span class="number">80</span>&#125;,</span><br><span class="line">    &#123; <span class="string">&quot;Pass&quot;</span>: <span class="number">60</span> &#125;,</span><br><span class="line">    &#123; <span class="string">&quot;Fail&quot;</span>: <span class="number">0</span> &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="Go-4">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">table := <span class="keyword">map</span>[<span class="type">string</span>]<span class="type">int</span>&#123;</span><br><span class="line">    <span class="string">&quot;Perfect&quot;</span>: <span class="number">100</span>,</span><br><span class="line">    <span class="string">&quot;Excellent&quot;</span>: <span class="number">80</span>,</span><br><span class="line">    <span class="string">&quot;Pass&quot;</span>: <span class="number">60</span>,</span><br><span class="line">    <span class="string">&quot;Fail&quot;</span>: <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-4">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">table</span> = HashMap::<span class="title function_ invoke__">new</span>();</span><br><span class="line">table.<span class="title function_ invoke__">insert</span>(<span class="string">&quot;Perfect&quot;</span>, <span class="number">100</span>);</span><br><span class="line">table.<span class="title function_ invoke__">insert</span>(<span class="string">&quot;Excellent&quot;</span>, <span class="number">80</span>);</span><br><span class="line">table.<span class="title function_ invoke__">insert</span>(<span class="string">&quot;Pass&quot;</span>, <span class="number">60</span>);</span><br><span class="line">table.<span class="title function_ invoke__">insert</span>(<span class="string">&quot;Fail&quot;</span>, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="控制流对比">控制流对比</h2>
+<h3 id="条件判断">条件判断</h3>
+<h4 id="C-9">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (cond) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (cond) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (cond1) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (cond2) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (cond3) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="C-10">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (cond) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (cond) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (cond1) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (cond2) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (cond3) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="type">int</span> num = <span class="number">1</span>; cond) &#123;  <span class="comment">// 带初始临时变量</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="comment">// else-if else</span></span><br></pre></td></tr></table></figure>
+<h4 id="Go-5">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> cond &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> cond &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> cond1 &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> cond2 &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> cond3 &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-5">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> cond &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> cond &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> cond1 &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> cond2 &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> cond3 &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">Pattern</span> = something &#123;  <span class="comment">// 模式匹配判断</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125; <span class="comment">// else-if else</span></span><br></pre></td></tr></table></figure>
+<h3 id="迭代循环">迭代循环</h3>
+<h4 id="C-11">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="C-12">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i : std::views::<span class="built_in">iota</span>(<span class="number">0</span>, <span class="number">100</span>)) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Go-6">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i := <span class="keyword">range</span> [<span class="number">100</span>]<span class="keyword">struct</span>&#123;&#125; &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-6">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="variable">i</span> <span class="keyword">in</span> <span class="number">0</span>..<span class="number">100</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="范围循环">范围循环</h3>
+<h4 id="C-13">C</h4>
+<p>无。</p>
+<h4 id="C-14">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> ele : something) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Go-7">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> _, ele := <span class="keyword">range</span> something &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-7">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="variable">ele</span> <span class="keyword">in</span> &amp;something &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="variable">ele</span> <span class="keyword">in</span> something.<span class="title function_ invoke__">iter</span>() &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="条件循环">条件循环</h3>
+<h4 id="C-15">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (cond) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (;cond;) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="C-16">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (cond) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (;cond;) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Go-8">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> cond &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ;cond; &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-8">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> cond &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">let</span> <span class="variable">Pattern</span> = something &#123;  <span class="comment">// 模式匹配循环</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="无限循环">无限循环</h3>
+<h4 id="C-17">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (;<span class="literal">true</span>;) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (;;) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="C-18">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (;<span class="literal">true</span>;) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (;;) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Go-9">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="literal">true</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ;<span class="literal">true</span>; &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ;; &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-9">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">loop</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="匹配选择">匹配选择</h3>
+<h4 id="C-19">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (value) &#123;</span><br><span class="line">    <span class="keyword">case</span> val1:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> val2:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="comment">// fallthrough</span></span><br><span class="line">    <span class="keyword">case</span> val3:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="C-20">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (value) &#123;</span><br><span class="line">    <span class="keyword">case</span> val1:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> val2:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="comment">// fallthrough</span></span><br><span class="line">    <span class="keyword">case</span> val3:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Go-10">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> value &#123;</span><br><span class="line">    <span class="keyword">case</span> val1:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">case</span> val2:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">fallthrough</span></span><br><span class="line">    <span class="keyword">case</span> val3:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> &#123;</span><br><span class="line">    <span class="keyword">case</span> cond1:  <span class="comment">// 布尔条件</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-10">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">match</span> value &#123;  <span class="comment">// 模式匹配</span></span><br><span class="line">    Pattern1 =&gt; <span class="comment">/* ... */</span>,</span><br><span class="line">    Pattern2 =&gt; &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    Pattern3 =&gt; &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">    _ =&gt; &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="程序结构化对比">程序结构化对比</h2>
+<h3 id="函数">函数</h3>
+<h4 id="C-21">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 无参无返回</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">no_arg_no_ret</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 旧式</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">no_arg_no_ret_old</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 无参有返回</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">no_arg_has_ret</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">no_arg_has_ret_old</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 有参无返回</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">has_arg_no_ret</span><span class="params">(<span class="type">int</span> a, <span class="type">double</span> b)</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 有参有返回</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">has_arg_has_ret</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="C-22">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 无参无返回</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">no_arg_no_ret</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">no_arg_no_ret_new</span><span class="params">()</span> -&gt; <span class="type">void</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 无参有返回</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">no_arg_has_ret</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">no_arg_has_ret_auto</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">no_arg_has_ret_new</span><span class="params">()</span> -&gt; <span class="type">int</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 有参无返回</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">has_arg_no_ret</span><span class="params">(<span class="type">int</span> a, <span class="type">double</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">has_arg_no_ret_new</span><span class="params">(<span class="type">int</span> a, <span class="type">double</span> b)</span> -&gt; <span class="type">void</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 有参有返回</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">has_arg_has_ret</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">has_arg_has_ret_auto</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">has_arg_has_ret_decl</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> -&gt; <span class="title">decltype</span><span class="params">(a + b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">has_arg_has_ret_new</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> -&gt; <span class="type">int</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Go-11">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 无参无返回</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NoArgNoRet</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 无参有返回</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NoArgHasRet</span><span class="params">()</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NoArgHasRetWithName</span><span class="params">()</span></span> ret <span class="type">int</span> &#123;</span><br><span class="line">    ret := <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 有参无返回</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">HasArgNoRet</span><span class="params">(a <span class="type">int</span>, b <span class="type">float64</span>)</span></span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 有参有返回</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">HasArgHasRet</span><span class="params">(a, b <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">HasArgHasRetWithName</span><span class="params">(a, b <span class="type">int</span>)</span></span> sum <span class="type">int</span> &#123;</span><br><span class="line">    sum := a + b</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">HasArgHasRetExplicitTypes</span><span class="params">(a <span class="type">int</span>, b <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-11">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 无参无返回</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">no_arg_no_ret</span>() &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 无参有返回</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">no_arg_has_ret</span>() <span class="punctuation">-&gt;</span> <span class="type">i32</span> &#123;</span><br><span class="line">    <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">no_arg_has_ret_with_return</span>() <span class="punctuation">-&gt;</span> <span class="type">i32</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 有参无返回</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">has_arg_no_ret</span>(a: <span class="type">i32</span>, b: <span class="type">f64</span>) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 有参有返回</span></span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">has_arg_has_ret</span>(a: <span class="type">i32</span>, b: <span class="type">i32</span>) <span class="punctuation">-&gt;</span> <span class="type">i32</span> &#123;</span><br><span class="line">    a + b</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">fn</span> <span class="title function_">has_arg_has_ret_with_return</span>(a: <span class="type">i32</span>, b: <span class="type">i32</span>) <span class="punctuation">-&gt;</span> <span class="type">i32</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="结构（类）定义">结构（类）定义</h3>
+<h4 id="C-23">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Type</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">double</span> b;</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">    <span class="type">const</span> <span class="type">char</span>* name;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="C-24">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Type</span> &#123;</span><br><span class="line">    <span class="comment">// 默认 public</span></span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">double</span> b;</span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    std::string name;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">static_method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TypeClass</span> &#123;</span><br><span class="line">    <span class="comment">// 默认 private</span></span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">double</span> b;</span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    std::string name;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">static_method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="Go-12">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Type <span class="keyword">struct</span> &#123;</span><br><span class="line">    a <span class="type">int</span></span><br><span class="line">    b <span class="type">float64</span></span><br><span class="line">    c <span class="type">rune</span></span><br><span class="line">    Name <span class="type">string</span>  <span class="comment">// public</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(this *Type)</span></span> Method() &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-12">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Type</span> &#123;</span><br><span class="line">    a: <span class="type">i32</span>;</span><br><span class="line">    b: <span class="type">f64</span>;</span><br><span class="line">    c: <span class="type">char</span>;</span><br><span class="line">    <span class="keyword">pub</span> name: <span class="type">String</span>;  <span class="comment">// public</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> <span class="title class_">Type</span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">method</span>(&amp;<span class="keyword">self</span>) &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="title function_">static_method</span>() &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="枚举定义">枚举定义</h3>
+<h4 id="C-25">C</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Day</span> &#123;</span></span><br><span class="line">    Sun,</span><br><span class="line">    Mon,</span><br><span class="line">    Tue,</span><br><span class="line">    Wed,</span><br><span class="line">    Thu,</span><br><span class="line">    Fri,</span><br><span class="line">    Sat,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="C-26">C++</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Day</span> &#123;</span><br><span class="line">    Sun,</span><br><span class="line">    Mon,</span><br><span class="line">    Tue,</span><br><span class="line">    Wed,</span><br><span class="line">    Thu,</span><br><span class="line">    Fri,</span><br><span class="line">    Sat,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">enum class</span> <span class="title class_">DayEnum</span> &#123;</span><br><span class="line">    Sun,</span><br><span class="line">    Mon,</span><br><span class="line">    Tue,</span><br><span class="line">    Wed,</span><br><span class="line">    Thu,</span><br><span class="line">    Fri,</span><br><span class="line">    Sat,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="Go-13">Go</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    Sun = <span class="literal">iota</span></span><br><span class="line">    Mon</span><br><span class="line">    Tue</span><br><span class="line">    Wed</span><br><span class="line">    Thu</span><br><span class="line">    Fri</span><br><span class="line">    Sat</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h4 id="Rust-13">Rust</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Day</span> &#123;</span><br><span class="line">    Sun,</span><br><span class="line">    Mon,</span><br><span class="line">    Tue,</span><br><span class="line">    Wed,</span><br><span class="line">    Thu,</span><br><span class="line">    Fri,</span><br><span class="line">    Sat</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 枚举变体</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Message</span> &#123;</span><br><span class="line">    Shutdown,</span><br><span class="line">    <span class="title function_ invoke__">Send</span>(<span class="type">String</span>),</span><br><span class="line">    Error &#123;</span><br><span class="line">        code: <span class="type">usize</span>,</span><br><span class="line">        msg: <span class="type">String</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_ invoke__">Sleep</span>(<span class="type">usize</span>, <span class="type">usize</span>),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="数据共享对比">数据共享对比</h2>
+<h3 id="C-27">C</h3>
+<h4 id="指针">指针</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> number = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span>* pointer = &amp;number;  <span class="comment">// 获取指针</span></span><br><span class="line"><span class="type">int</span> other = *pointer;  <span class="comment">// 获取指针值</span></span><br><span class="line">*pointer = <span class="number">2</span>;  <span class="comment">// 设置指针值</span></span><br><span class="line">pointer = &amp;other;  <span class="comment">// 重设目标</span></span><br></pre></td></tr></table></figure>
+<h4 id="指向不可变指针（常量指针）">指向不可变指针（常量指针）</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> number = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span>* <span class="type">const</span> pointer = &amp;number;</span><br><span class="line"><span class="type">int</span> other = *pointer;</span><br><span class="line">*pointer = <span class="number">2</span>;</span><br><span class="line"><span class="comment">// pointer = &amp;other;  --- Error</span></span><br></pre></td></tr></table></figure>
+<h4 id="数据不可变指针（指向常量的指针）">数据不可变指针（指向常量的指针）</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> number = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span>* pointer = &amp;number;</span><br><span class="line"><span class="type">int</span> other = *pointer;</span><br><span class="line"><span class="comment">// *pointer = 2;  --- Error</span></span><br><span class="line">pointer = &amp;other;</span><br></pre></td></tr></table></figure>
+<h4 id="指向与数据不可变指针（指向常量的常量指针）">指向与数据不可变指针（指向常量的常量指针）</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> number = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span>* <span class="type">const</span> pointer = &amp;number;</span><br><span class="line"><span class="type">int</span> other = *pointer;</span><br><span class="line"><span class="comment">// *pointer = 2;  --- Error</span></span><br><span class="line"><span class="comment">// pointer = &amp;other;  --- Error</span></span><br></pre></td></tr></table></figure>
+<h3 id="C-28">C++</h3>
+<h4 id="指针-2">指针</h4>
+<p>与 C 语言完全一致。</p>
+<h4 id="引用">引用</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> number = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span>&amp; reference = number;  <span class="comment">// 创建引用</span></span><br><span class="line"><span class="type">int</span> other = reference;  <span class="comment">// 读取引用值</span></span><br><span class="line">reference = <span class="number">2</span>;  <span class="comment">// 设置引用值</span></span><br></pre></td></tr></table></figure>
+<h4 id="不可变引用">不可变引用</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> number = <span class="number">1</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span>&amp; reference = number;</span><br><span class="line"><span class="type">int</span> other = reference;</span><br><span class="line"><span class="comment">// reference = 2;  --- Error</span></span><br></pre></td></tr></table></figure>
+<h3 id="Go-14">Go</h3>
+<h4 id="指针-3">指针</h4>
+<p>显式定义类型：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> number <span class="type">int</span> = <span class="number">1</span></span><br><span class="line"><span class="keyword">var</span> pointer *<span class="type">int</span> = &amp;number  <span class="comment">// 创建指针</span></span><br><span class="line"><span class="keyword">var</span> other <span class="type">int</span> = *pointer  <span class="comment">// 读取指针值</span></span><br><span class="line">*pointer = <span class="number">2</span>  <span class="comment">// 设置指针值</span></span><br><span class="line">pointer = &amp;other  <span class="comment">// 重设目标</span></span><br></pre></td></tr></table></figure>
+<p>简写声明：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">number := <span class="number">1</span></span><br><span class="line">pointer := &amp;number</span><br><span class="line">other := *pointer</span><br><span class="line">*pointer = <span class="number">2</span></span><br><span class="line">pointer = &amp;other</span><br></pre></td></tr></table></figure>
+<h3 id="Rust-14">Rust</h3>
+<h4 id="可变借用">可变借用</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">number</span> = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="variable">borrow</span> = &amp;<span class="keyword">mut</span> number;  <span class="comment">// 创建借用</span></span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">other</span> = *borrow;  <span class="comment">// 读取借用值（若实现 Copy 则复制，否则转移所有权）</span></span><br><span class="line">*borrow = <span class="number">2</span>;  <span class="comment">// 设置借用值（若实现 Copy 则复制，否则转移所有权）</span></span><br><span class="line"><span class="comment">// borrow = &amp;mut other;  --- 需要 mut 变量才能重设目标</span></span><br></pre></td></tr></table></figure>
+<h4 id="不可变借用">不可变借用</h4>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">number</span> = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="variable">borrow</span> = &amp;number;</span><br><span class="line"><span class="keyword">let</span> <span class="variable">other</span> = *borrow;</span><br><span class="line"><span class="comment">// *borrow = 2;  --- Error</span></span><br></pre></td></tr></table></figure>
+<h1>程序设计对比</h1>
+<p>接下来，我们用这四种语言实现同一个程序，来从全局的角度对比一下这四种语言。</p>
+<h2 id="程序目标">程序目标</h2>
+<p>输入一个无向带权图，该图不一定连通。求出此图的最小生成树的边权之和，如果此图不连通，则输出 <code>Not connected.</code>。</p>
+<p>从标准输入读取图的信息。第一行两个整 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span></eq> 与 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></eq>，表示图的点数与边数。接下来共 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span></eq> 行，每行参个整数 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></eq>、<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></eq>、<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span></eq>，代表点 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></eq> 与点 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></eq> 之间有一条无向边，边权是 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span></eq>。</p>
+<p>将结果输出到标准输出。如果该图连通，输出最小生成树的边权之和；否则，输出 <code>Not connected.</code>。</p>
+<p>点的序号 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></eq> 和 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></eq> 采用以 1-based 索引（即索引从 1 开始）。</p>
+<h2 id="程序设计">程序设计</h2>
+<p>我们使用 Kruskal 算法求最小生成树。简单说明一下算法思路：输入所有边后，对边按照边权升序排序，并从最小边权的边开始处理。使用并查集来处理哪些顶点在已知的最小生成树中，哪些不在。每次处理一条边时，需要判断这个边所连接的两个点是否已经都在最小生成树中了，也就是这两个点是否已经在并查集中连通了。只要有一个点不在已知的最小生成树中，我们将此边加入最小生成树，在并查集中连通两个顶点，并累加边权。这是一种典型的贪心算法，时间复杂度为 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mrow><mo fence="true">(</mo><mi>E</mi><mi>log</mi><mo>⁡</mo><mi>E</mi><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">O\left(E \log E\right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span></eq>，空间复杂度为 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mrow><mo fence="true">(</mo><mi>E</mi><mo>+</mo><mi>V</mi><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">O\left(E + V\right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span></eq>，其中 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></eq> 是边数，<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span></eq> 是点数，计算机科学中对数的默认底为 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span></eq>。</p>
+<p>根据树的性质：边段数量为点的数量减一。所以当我们处理了足够多的边时，停止处理并输出累加边权。</p>
+<p>如果最后所有的边处理完成但是已知的最小生成树中还没有足够的边，说明原图不连通。这时我们输出 <code>Not connected.</code>。</p>
+<p>标准输入的节点是 1-based 索引，为了方便处理，我们在进行数据输入时就将其转换为 0-based 索引。</p>
+<p>关于图、树、最小生成树、Kruskal 算法、贪心算法等内容，感兴趣的可以自行搜索更多资料。</p>
+<h2 id="代码">代码</h2>
+<h3 id="C-29">C</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;inttypes.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int32_t</span> int32;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">size_t</span> usize;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    int32* father;</span><br><span class="line">&#125; UnionFind;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    int32 a;</span><br><span class="line">    int32 b;</span><br><span class="line">    int32 weight;</span><br><span class="line">&#125; Edge;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">edge_cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* a, <span class="type">const</span> <span class="type">void</span>* b)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">read_data</span><span class="params">(usize* node_cnt, usize* edge_cnt, Edge** <span class="type">const</span> edges)</span>;</span><br><span class="line"><span class="type">bool</span> <span class="title function_">kruskal</span><span class="params">(<span class="type">const</span> usize node_cnt, <span class="type">const</span> usize edge_cnt, Edge* <span class="type">const</span> edges, int32* <span class="type">const</span> result)</span>;</span><br><span class="line">UnionFind* <span class="title function_">create_union_find</span><span class="params">(<span class="type">const</span> usize size)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">free_union_find</span><span class="params">(UnionFind* <span class="type">const</span> self)</span>;</span><br><span class="line">int32 <span class="title function_">find_root</span><span class="params">(UnionFind* <span class="type">const</span> self, <span class="type">const</span> int32 a)</span>;</span><br><span class="line"><span class="type">bool</span> <span class="title function_">connected</span><span class="params">(UnionFind* <span class="type">const</span> self, <span class="type">const</span> int32 a, <span class="type">const</span> int32 b)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">merge</span><span class="params">(UnionFind* <span class="type">const</span> self, <span class="type">const</span> int32 a, <span class="type">const</span> int32 b)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    usize node_cnt = <span class="number">0</span>;</span><br><span class="line">    usize edge_cnt = <span class="number">0</span>;</span><br><span class="line">    Edge* edges = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    read_data(&amp;node_cnt, &amp;edge_cnt, &amp;edges);</span><br><span class="line"></span><br><span class="line">    int32 result = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">const</span> <span class="type">bool</span> succeeded = kruskal(node_cnt, edge_cnt, edges, &amp;result);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (succeeded) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%&quot;</span> PRId32 <span class="string">&quot;\n&quot;</span>, result);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Not connected.\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">free</span>(edges);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">edge_cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* a, <span class="type">const</span> <span class="type">void</span>* b)</span> &#123;</span><br><span class="line">    <span class="type">const</span> Edge* edge_a = (<span class="type">const</span> Edge*) a;</span><br><span class="line">    <span class="type">const</span> Edge* edge_b = (<span class="type">const</span> Edge*) b;</span><br><span class="line">    <span class="keyword">if</span> (edge_a-&gt;weight &lt; edge_b-&gt;weight) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (edge_a-&gt;weight &gt; edge_b-&gt;weight) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">read_data</span><span class="params">(usize* node_cnt, usize* edge_cnt, Edge** <span class="type">const</span> edges)</span> &#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> input_res = <span class="built_in">scanf</span>(<span class="string">&quot;%zu%zu&quot;</span>, node_cnt, edge_cnt);</span><br><span class="line">    <span class="keyword">if</span> (input_res != <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    *edges = (Edge*) <span class="built_in">malloc</span>(*edge_cnt * <span class="keyword">sizeof</span>(Edge));</span><br><span class="line">    <span class="keyword">if</span> (*edges == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (usize i = <span class="number">0</span>; i &lt; *edge_cnt; i++) &#123;</span><br><span class="line">        int32 a, b, weight;</span><br><span class="line">        <span class="type">const</span> <span class="type">int</span> input_res = <span class="built_in">scanf</span>(<span class="string">&quot;%&quot;</span> PRId32 <span class="string">&quot;%&quot;</span> PRId32 <span class="string">&quot;%&quot;</span> PRId32, &amp;a, &amp;b, &amp;weight);</span><br><span class="line">        <span class="keyword">if</span> (input_res != <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        (*edges)[i] = (Edge)&#123;</span><br><span class="line">            .a = a - <span class="number">1</span>,</span><br><span class="line">            .b = b - <span class="number">1</span>,</span><br><span class="line">            .weight = weight,</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="title function_">kruskal</span><span class="params">(<span class="type">const</span> usize node_cnt, <span class="type">const</span> usize edge_cnt, Edge* <span class="type">const</span> edges, int32* <span class="type">const</span> result)</span> &#123;</span><br><span class="line">    qsort(edges, edge_cnt, <span class="keyword">sizeof</span>(Edge), edge_cmp);</span><br><span class="line"></span><br><span class="line">    UnionFind* <span class="type">const</span> <span class="built_in">set</span> = create_union_find(node_cnt);</span><br><span class="line"></span><br><span class="line">    int32 total = <span class="number">0</span>;</span><br><span class="line">    int32 handled = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (usize i = <span class="number">0</span>; i &lt; edge_cnt; i++) &#123;</span><br><span class="line">        <span class="type">const</span> Edge* <span class="type">const</span> edge = &amp;edges[i];</span><br><span class="line">        <span class="keyword">if</span> (connected(<span class="built_in">set</span>, edge-&gt;a, edge-&gt;b)) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        merge(<span class="built_in">set</span>, edge-&gt;a, edge-&gt;b);</span><br><span class="line">        total += edge-&gt;weight;</span><br><span class="line">        handled++;</span><br><span class="line">        <span class="keyword">if</span> (handled == (int32) node_cnt - <span class="number">1</span>) &#123;</span><br><span class="line">            *result = total;</span><br><span class="line">            free_union_find(<span class="built_in">set</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    free_union_find(<span class="built_in">set</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">UnionFind* <span class="title function_">create_union_find</span><span class="params">(<span class="type">const</span> usize size)</span> &#123;</span><br><span class="line">    UnionFind* <span class="type">const</span> self = (UnionFind* <span class="type">const</span>) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(UnionFind));</span><br><span class="line">    <span class="keyword">if</span> (self == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    self-&gt;father = (int32*) <span class="built_in">malloc</span>(size * <span class="keyword">sizeof</span>(int32));</span><br><span class="line">    <span class="keyword">if</span> (self-&gt;father == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (usize i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        self-&gt;father[i] = (int32) i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> self;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">free_union_find</span><span class="params">(UnionFind* <span class="type">const</span> self)</span> &#123;</span><br><span class="line">    <span class="built_in">free</span>(self-&gt;father);</span><br><span class="line">    <span class="built_in">free</span>(self);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int32 <span class="title function_">find_root</span><span class="params">(UnionFind* <span class="type">const</span> self, <span class="type">const</span> int32 a)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (self-&gt;father[a] == a) &#123;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">const</span> int32 temp = find_root(self, self-&gt;father[a]);</span><br><span class="line">    self-&gt;father[a] = temp;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="title function_">connected</span><span class="params">(UnionFind* <span class="type">const</span> self, <span class="type">const</span> int32 a, <span class="type">const</span> int32 b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> find_root(self, a) == find_root(self, b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">merge</span><span class="params">(UnionFind* <span class="type">const</span> self, <span class="type">const</span> int32 a, <span class="type">const</span> int32 b)</span> &#123;</span><br><span class="line">    <span class="type">const</span> int32 root_a = find_root(self, a);</span><br><span class="line">    <span class="type">const</span> int32 root_b = find_root(self, b);</span><br><span class="line">    self-&gt;father[root_a] = root_b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="C-30">C++</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdint&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;optional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;tuple&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> int32 = std::<span class="type">int32_t</span>;</span><br><span class="line"><span class="keyword">using</span> usize = std::<span class="type">size_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> <span class="keyword">final</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">const</span> std::unique_ptr&lt;int32[]&gt; father;</span><br><span class="line">    <span class="function"><span class="keyword">auto</span> <span class="title">find_root</span><span class="params">(<span class="type">const</span> int32 a)</span> -&gt; int32</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">UnionFind</span>(<span class="type">const</span> usize size);</span><br><span class="line">    <span class="function"><span class="keyword">auto</span> <span class="title">connected</span><span class="params">(<span class="type">const</span> int32 a, <span class="type">const</span> int32 b)</span> -&gt; <span class="type">bool</span></span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">const</span> int32 a, <span class="type">const</span> int32 b)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Edge</span> <span class="keyword">final</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">const</span> int32 a;</span><br><span class="line">    <span class="type">const</span> int32 b;</span><br><span class="line">    <span class="type">const</span> int32 weight;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Edge</span>(<span class="type">const</span> int32 a, <span class="type">const</span> int32 b, <span class="type">const</span> int32 weight);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">read_data</span><span class="params">()</span> -&gt; std::tuple&lt;usize, std::vector&lt;std::unique_ptr&lt;Edge&gt;&gt;&gt;</span>;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">kruskal</span><span class="params">(<span class="type">const</span> usize node_cnt, std::vector&lt;std::unique_ptr&lt;Edge&gt;&gt;&amp; edges)</span> -&gt; std::optional&lt;int32&gt;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">main</span><span class="params">()</span> -&gt; <span class="type">int</span> </span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> [node_cnt, edges] = <span class="built_in">read_data</span>();</span><br><span class="line"></span><br><span class="line">    <span class="type">const</span> std::optional&lt;int32&gt; result = <span class="built_in">kruskal</span>(node_cnt, edges);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (result.<span class="built_in">has_value</span>()) &#123;</span><br><span class="line">        std::cout &lt;&lt; result.<span class="built_in">value</span>() &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;Not connected.&quot;</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">read_data</span><span class="params">()</span> -&gt; std::tuple&lt;usize, std::vector&lt;std::unique_ptr&lt;Edge&gt;&gt;&gt; </span>&#123;</span><br><span class="line">    usize node_cnt, edge_cnt;</span><br><span class="line">    std::cin &gt;&gt; node_cnt &gt;&gt; edge_cnt;</span><br><span class="line"></span><br><span class="line">    std::vector&lt;std::unique_ptr&lt;Edge&gt;&gt; edges;</span><br><span class="line">    <span class="keyword">for</span> (usize i = <span class="number">0</span>; i &lt; edge_cnt; i++) &#123;</span><br><span class="line">        int32 a, b, weight;</span><br><span class="line">        std::cin &gt;&gt; a &gt;&gt; b &gt;&gt; weight;</span><br><span class="line">        edges.<span class="built_in">push_back</span>(std::<span class="built_in">make_unique</span>&lt;Edge&gt;(a - <span class="number">1</span>, b - <span class="number">1</span>, weight));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">make_tuple</span>(node_cnt, std::<span class="built_in">move</span>(edges));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">kruskal</span><span class="params">(<span class="type">const</span> usize node_cnt, std::vector&lt;std::unique_ptr&lt;Edge&gt;&gt;&amp; edges)</span> -&gt; std::optional&lt;int32&gt; </span>&#123;</span><br><span class="line">    std::ranges::<span class="built_in">sort</span>(edges, [](<span class="type">const</span> <span class="keyword">auto</span>&amp; a, <span class="type">const</span> <span class="keyword">auto</span>&amp; b) -&gt; <span class="type">bool</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a-&gt;weight &lt; b-&gt;weight;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="function">UnionFind <span class="title">set</span><span class="params">(node_cnt)</span></span>;</span><br><span class="line"></span><br><span class="line">    int32 total = <span class="number">0</span>;</span><br><span class="line">    int32 handled = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; edge : edges) &#123;</span><br><span class="line">        <span class="keyword">if</span> (set.<span class="built_in">connected</span>(edge-&gt;a, edge-&gt;b)) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        set.<span class="built_in">merge</span>(edge-&gt;a, edge-&gt;b);</span><br><span class="line">        total += edge-&gt;weight;</span><br><span class="line">        handled++;</span><br><span class="line">        <span class="keyword">if</span> (handled == <span class="built_in">static_cast</span>&lt;int32&gt;(node_cnt) - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> std::<span class="built_in">make_optional</span>(total);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> std::<span class="literal">nullopt</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">UnionFind::<span class="built_in">UnionFind</span>(<span class="type">const</span> usize size) : <span class="built_in">father</span>(std::<span class="built_in">make_unique</span>&lt;int32[]&gt;(size)) &#123;</span><br><span class="line">    <span class="keyword">for</span> (usize i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        father[i] = <span class="built_in">static_cast</span>&lt;int32&gt;(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">UnionFind::connected</span><span class="params">(<span class="type">const</span> int32 a, <span class="type">const</span> int32 b)</span> -&gt; <span class="type">bool</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">find_root</span>(a) == <span class="built_in">find_root</span>(b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">UnionFind::merge</span><span class="params">(<span class="type">const</span> int32 a, <span class="type">const</span> int32 b)</span> </span>&#123;</span><br><span class="line">    <span class="type">const</span> int32 root_a = <span class="built_in">find_root</span>(a);</span><br><span class="line">    <span class="type">const</span> int32 root_b = <span class="built_in">find_root</span>(b);</span><br><span class="line">    father[root_a] = root_b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">UnionFind::find_root</span><span class="params">(<span class="type">const</span> int32 a)</span> -&gt; int32 </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (father[a] == a) &#123;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">const</span> int32 temp = <span class="built_in">find_root</span>(father[a]);</span><br><span class="line">    father[a] = temp;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Edge::<span class="built_in">Edge</span>(<span class="type">const</span> int32 a, <span class="type">const</span> int32 b, <span class="type">const</span> int32 weight) : <span class="built_in">a</span>(a), <span class="built_in">b</span>(b), <span class="built_in">weight</span>(weight) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Go-15">Go</h3>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;sort&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> UnionFind <span class="keyword">struct</span> &#123;</span><br><span class="line">	father []<span class="type">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Edge <span class="keyword">struct</span> &#123;</span><br><span class="line">	a <span class="type">int</span></span><br><span class="line">	b <span class="type">int</span></span><br><span class="line">	weight <span class="type">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	nodeCnt, edges := readData()</span><br><span class="line"></span><br><span class="line">	result := kruskal(nodeCnt, edges)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> result != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(*result)</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;Not connected.&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">readData</span><span class="params">()</span></span> (nodeCnt <span class="type">int</span>, edges []Edge) &#123;</span><br><span class="line">	<span class="keyword">var</span> edgeCnt <span class="type">int</span></span><br><span class="line">	fmt.Scan(&amp;nodeCnt, &amp;edgeCnt)</span><br><span class="line"></span><br><span class="line">	edges = <span class="built_in">make</span>([]Edge, edgeCnt)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="keyword">range</span> edgeCnt &#123;</span><br><span class="line">		<span class="keyword">var</span> a, b, weight <span class="type">int</span></span><br><span class="line">		fmt.Scan(&amp;a, &amp;b, &amp;weight)</span><br><span class="line">		edges[i] = Edge &#123;</span><br><span class="line">			a: a - <span class="number">1</span>,</span><br><span class="line">			b: b - <span class="number">1</span>,</span><br><span class="line">			weight: weight,</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">kruskal</span><span class="params">(nodeCnt <span class="type">int</span>, edges []Edge)</span></span> *<span class="type">int</span> &#123;</span><br><span class="line">	sort.Slice(edges, <span class="function"><span class="keyword">func</span><span class="params">(i, j <span class="type">int</span>)</span></span> <span class="type">bool</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> edges[i].weight &lt; edges[j].weight</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	set := newUnionFind(nodeCnt)</span><br><span class="line"></span><br><span class="line">	total := <span class="number">0</span></span><br><span class="line">	handled := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> _, edge := <span class="keyword">range</span> edges &#123;</span><br><span class="line">		<span class="keyword">if</span> set.connected(edge.a, edge.b) &#123;</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line">		set.merge(edge.a, edge.b)</span><br><span class="line">		total += edge.weight</span><br><span class="line">		handled++</span><br><span class="line">		<span class="keyword">if</span> handled == nodeCnt - <span class="number">1</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> &amp;total</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">newUnionFind</span><span class="params">(size <span class="type">int</span>)</span></span> *UnionFind &#123;</span><br><span class="line">	set := UnionFind &#123;</span><br><span class="line">		father: <span class="built_in">make</span>([]<span class="type">int</span>, size),</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="keyword">range</span> size &#123;</span><br><span class="line">		set.father[i] = i</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> &amp;set</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(set *UnionFind)</span></span> connected(a, b <span class="type">int</span>) <span class="type">bool</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> set.findRoot(a) == set.findRoot(b)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(set *UnionFind)</span></span> merge(a, b <span class="type">int</span>) &#123;</span><br><span class="line">	rootA := set.findRoot(a)</span><br><span class="line">	rootB := set.findRoot(b)</span><br><span class="line">	set.father[rootA] = rootB</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(set *UnionFind)</span></span> findRoot(a <span class="type">int</span>) <span class="type">int</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> set.father[a] == a &#123;</span><br><span class="line">		<span class="keyword">return</span> a</span><br><span class="line">	&#125;</span><br><span class="line">	temp := set.findRoot(set.father[a])</span><br><span class="line">	set.father[a] = temp</span><br><span class="line">	<span class="keyword">return</span> temp</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">凌雪蓝冰</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/CleanIce-BlueSnowy" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
