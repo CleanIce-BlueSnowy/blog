@@ -256,7 +256,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-12-14 12:40:35" itemprop="dateModified" datetime="2025-12-14T12:40:35+08:00">2025-12-14</time>
+      <time title="修改时间：2025-12-14 12:57:28" itemprop="dateModified" datetime="2025-12-14T12:57:28+08:00">2025-12-14</time>
     </span>
 
   
@@ -397,7 +397,7 @@
 </table>
 <details class="note info"><summary><p>提示</p>
 </summary>
-<p>C++ 有 <code>std::shared_ptr</code> 和 <code>std::unique_ptr</code> 等类型，它们是只能指针。但是它们是基于标准库实现的包装类型，只是将手动内存管理的任务包装起来了而已。所以在语言层面我们不认为 C++ 有智能指针管理。</p>
+<p>C++ 有 <code>std::shared_ptr</code> 和 <code>std::unique_ptr</code> 等类型，它们是智能指针。但是它们是基于标准库实现的包装类型，只是将手动内存管理的任务包装起来了而已。所以在语言层面我们不认为 C++ 有智能指针管理。</p>
 <p>Rust 语言中有 <code>Rc</code> 和 <code>Arc</code> 类型，它们也是智能指针。但它没有打破 Rust 的“一个数据只能有一个所有者”的限制，它仅仅包装了一个共享的数据，对于内部的这个数据来说，类似于多所有者。Rust 将 <code>Rc</code> 和 <code>Arc</code> 类型视作普通类型，一视同仁地进行生命周期分析，并决定分配和释放的位置，以及检查借用合法性。所以此处不认为 Rust 语言层面有智能指针管理。</p>
 
 </details>
