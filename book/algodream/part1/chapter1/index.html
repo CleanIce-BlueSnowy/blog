@@ -27,8 +27,8 @@
 <meta property="og:site_name" content="算法星河">
 <meta property="og:description" content="什么是算法 要学习算法的你，一定想要知道：到底什么是算法呢？ 在前言部分我们大概提到，算法就是计算某个东西的方法。这是最直接、最简单也是最广泛的定义，但其实并不是很准确。 我们来看一个例子：高斯小时候在数学课上调皮捣蛋，他的数学老师罚他计算 1 加到 100 的和。高斯埋头开始计算，数学老师心里偷乐：这还不给你算到天荒地老！ 此时，数学老师心中的计算方法是一个一个老老实实地挨个相加，也就是 1+2">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-12-22T14:38:43.004Z">
-<meta property="article:modified_time" content="2025-12-22T14:38:43.004Z">
+<meta property="article:published_time" content="2025-12-23T14:30:59.732Z">
+<meta property="article:modified_time" content="2025-12-23T14:30:59.732Z">
 <meta property="article:author" content="凌雪蓝冰">
 <meta property="article:tag" content="凌雪蓝冰, 计算机科学, 博客, 计算机, 算法, 探索, 星河, 未来, 理论, 电脑, 编程, 技术">
 <meta name="twitter:card" content="summary">
@@ -166,7 +166,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">什么是算法</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">什么是算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">算法的效率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">2.1.</span> <span class="nav-text">时间复杂度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">2.2.</span> <span class="nav-text">空间复杂度</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -294,9 +294,28 @@ s = \dfrac{\left(l + r\right) \times n}{2} = \dfrac{\left(l + r\right) \times \l
 <p>高斯的德语全名是：Johann Carl Friedrich Gauß</p>
 
 </details>
-<p>上面就是两种算法：一种是老师的挨个做加法，另一种是高斯的分组法。虽然两种算法都能够得到正确答案，但显然高斯的算法更加优秀、高效，尤其对于人手算而言。由此我们可以得出：</p>
+<p>以上就是两种算法。两种算法虽然不一样，但是目的都是通过某种固定的方法得到问题的答案。因此，我们可以说，算法就是解决某个特定问题的答案的过程和方式。</p>
+<p>让我们来看一下算法的准确定义：</p>
+<details class="note default"><summary><p>定义：算法</p>
+</summary>
+<p><strong>算法（Algorithm）</strong> 是解决特定问题或执行特定任务的一系列<strong>明确的、有限的、可执行的</strong>步骤或指令的集合。算法具备一下特征：</p>
+<ol>
+<li><strong>获取输入</strong>：算法可以从外界输入数据并进行处理，也可以没有输入数据，简单地计算答案。</li>
+<li><strong>产生输出</strong>；算法要产生<strong>至少一个</strong>输出。不产生结果输出的算法是没有意义的。</li>
+<li><strong>确定性</strong>：算法解决问题的步骤或指令是<strong>确定的</strong>。</li>
+<li><strong>有限性</strong>：算法必须在<strong>有限</strong>的步骤或指令内解决问题或完成任务，<strong>不可以</strong>无限执行。</li>
+<li><strong>有效性</strong>：算法必须<strong>能够正确地</strong>解决问题或完成任务。</li>
+</ol>
+
+</details>
+<p>算法是一种理论性的概念，在研究算法的时候，我们通常会使用伪代码或代码进行算法的实现，自然语言和流程图当然也可以。算法只规定解决问题或执行任务的步骤或指令，而没有明确这些步骤或指令以什么样的形式展现出来。计算机算法最终都是要在计算机程序中执行的，所以伪代码、UML 流程图或实际代码是最常用的展现形式。本书将使用 C# 和 Rust 两种编程语言代码展现算法逻辑，必要时配 UML 流程图进行补充说明。</p>
+<h1>算法的效率</h1>
+<p>以上的两种算法：一种是老师的挨个做加法，另一种是高斯的分组算法。虽然两种算法都能够得到正确答案，但显然高斯的算法更加优秀、高效，尤其对于人手算而言。由此我们可以得出：</p>
 <p><strong>解决同一个问题的算法可能有很多种，但是有些算法非常低效，而有些算法则很高效。</strong></p>
 <p>实际应用中，我们需要根据问题选择合适的算法。对于需要快速编码、数据规模不大的问题，可以使用最朴素的做法，以减少代码和思维工作量；而对于需要长期使用、数据规模可能很大的问题，使用高效的做法是更好的选择。我们也能发现，对一个问题的<strong>特性</strong>进行分析，往往能够想到更好的算法。</p>
+<p>而我们如何衡量一个算法在效率上的好坏呢？计算机中最重要的资源是<strong>运行时间</strong>和<strong>存储空间</strong>，也就是你的算法需要多久、要占用多少内存空间，而我们所讨论的计算机算法是在计算机上运行的，而算法具备有效性——正确的算法一定能解决问题，那么衡量算法好坏就有了两个标准：一个是在时间维度上的<strong>时间复杂度</strong>，而另一个是在空间维度上的<strong>空间复杂度</strong>。</p>
+<h2 id="时间复杂度">时间复杂度</h2>
+<h2 id="空间复杂度">空间复杂度</h2>
 
       </div>
       
@@ -322,7 +341,7 @@ s = \dfrac{\left(l + r\right) \times n}{2} = \dfrac{\left(l + r\right) \times \l
 
   <div class="copyright">
     &copy; 
-    <span itemprop="copyrightYear">2025</span>
+    <span itemprop="copyrightYear">2026</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
